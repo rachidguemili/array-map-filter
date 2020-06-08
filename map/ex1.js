@@ -8,6 +8,7 @@
 * As usual: FIRST OF ALL, focus on writing the function that processes ONE string...
   Then you only need to use this function with map.
 
+
 Sample INPUT array (strings) for getStringsLength:
   [
     'Chicken',
@@ -23,11 +24,40 @@ Expected OUTPUT for this sample array:
     'Tofu contains 4 characters',
     'Mayonnaise contains 10 characters'
   ]
-
 */
 
-function getStringsLength(strings) {
-}
+
+
+
+function getStringsLength(tab) {
+ /* const tab = [
+    'Chicken',
+    'Bacon',
+    'Tofu',
+    'Mayonnaise'
+  ];
+  
+
+  return tab.map(element =>
+     { `${element} contains ${element.length} characters`}
+     );
+   
+   
+  */
+
+    return tab.map(element =>
+       element +  " contains " + element.length + " characters");
+    }
+
+    const  tab = [
+      'Chicken',
+      'Bacon',
+      'Tofu',
+      'Mayonnaise'
+    ];
+    
+    console.log(getStringsLength(tab));
+
 
 // If you need, you can always visualize the result with a console.log.
 // In that case, uncomment the line below (you can also add your own
@@ -35,7 +65,6 @@ function getStringsLength(strings) {
 // Instead of running `npm test`, you can then use `node map/ex1`
 // (you still need to run `npm test` to make sure you did right).
 
-// console.log(getStringsLength(['Cat', 'Lion', 'Tiger', 'Jaguar', 'Leopard']));
 
 // DON'T TOUCH THIS!
 module.exports = getStringsLength;

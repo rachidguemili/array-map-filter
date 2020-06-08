@@ -61,10 +61,49 @@ Expected OUTPUT for this sample:
 
  */
 
+
+ 
 function getMoviesFreshness(movies) {
+
+
+return movies.map( mov=>{
+
+
+ if   (mov.rating < 60) 
+       mov.label = "rotten";
+  else if   (mov.rating > 75)
+      mov.label="certified fresh";
+else  mov.label= "fresh";
+ return mov;
+
+});  
+
+
+
 }
 
 
+let f = [
+  {
+    name: 'Crazy Rich Asians',
+    rating: 93
+  },
+  {
+    name: 'Skyscraper',
+    rating: 46
+  },
+  {
+    name: 'Leave No Trace',
+    rating: 100
+  },
+  {
+    name: 'White Boy Rick',
+    rating: 60
+  }
+];
+
+
+console.log(getMoviesFreshness(f));
 
 // DON'T TOUCH THIS!
 module.exports = getMoviesFreshness;

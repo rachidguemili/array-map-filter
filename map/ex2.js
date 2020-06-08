@@ -43,9 +43,33 @@ Expected OUTPUT for this sample
 */
 
 function getFoodCategories(foods) {
-}
+ 
+
+  return foods.map(elt => elt.isVegetarian? 
+            elt.food+=" is suitable for vegetarians" : elt.food+=" is not suitable for vegetarians");
 
 
+  }
+  
+let f =   [
+  {
+    food: 'Bacon',
+    isVegetarian: false
+  },
+  {
+    food: 'Sausage',
+    isVegetarian: false
+  },
+  {
+    food: 'Tofu',
+    isVegetarian: true
+  },
+  {
+    food: 'Chick Pea',
+    isVegetarian: true
+  }
+];
 
+console.log(getFoodCategories(f));
 // DON'T TOUCH THIS!
 module.exports = getFoodCategories;

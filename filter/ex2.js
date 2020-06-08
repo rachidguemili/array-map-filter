@@ -26,7 +26,28 @@ Expected OUTPUT for this sample:
 */
 
 function keepStarks(names) {
+  /*
+ 
+  var tab = new Array;
+   names.forEach(element => {
+    if (element.indexOf("Stark")>=0)
+    tab.push(element);
+  
+  }); 
+
+ return tab;
+*/
+ return   names.filter(name=> name.indexOf('Stark') != -1);
 }
+  console.log(keepStarks(  [
+    'Bran Stark',
+    'Cersei Lannister',
+    'Sandor Clegane',
+    'Arya Stark',
+    'Yara Greyjoy',
+    'Sansa Stark'
+  ]));
 
 // DON'T TOUCH THIS!
 module.exports = keepStarks;
+
